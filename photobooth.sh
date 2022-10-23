@@ -10,8 +10,8 @@ while [ "$a" != "q" ];do
     if [ "$a" == "" ]; then
         printf "Cheese!!!"
         printf "\n\n\n"
-        fswebcam -q --no-banner -r 1024x1024 --save /tmp/photoboot.jpg
-        #python ~/Documents/Github/PhotoBoot_SuperSimple/esc-pos-image.py /tmp/photoboot.jpg > "printer_device"
+        fswebcam -q --greyscale --no-banner -r 600x600 --save /tmp/photoboot.jpg
+        python /home/tx/Documents/Github/PhotoBoot_SuperSimple/esc-pos-image.py /tmp/photoboot.jpg > /dev/usb/lp0
         
         printf "De Rien!!!"
         eog /tmp/photoboot.jpg &
